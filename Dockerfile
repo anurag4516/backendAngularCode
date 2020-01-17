@@ -4,7 +4,7 @@ COPY pom.xml /build/
 COPY src /build/src/
 WORKDIR /build/
 RUN mvn package
-
+RUN mvn verify sonar:sonar
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
