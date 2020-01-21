@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
       - name: angularbackend
-        image: anurag4516/backend
+        image: anurag4516/backend:v1
         ports: 
         - containerPort: 8080 
 --- 
