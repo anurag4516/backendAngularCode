@@ -10,6 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
+- stage: Information_Gathering
+  jobs:
+  - job: Get_Info
+    steps:
+    - bash: echo $(Build.BuildNumber)
 - stage: Build
   jobs:
   - job: FirstJob
