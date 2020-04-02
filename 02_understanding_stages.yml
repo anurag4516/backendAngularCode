@@ -17,11 +17,13 @@ stages:
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
 - stage: DevDeploy
+  dependsOn: Build
   jobs:
   - job: DevDeploy
     steps:
     - bash: echo Dev Deploy Job 
 - stage: QADeploy
+  dependsOn: Build
   jobs:
   - job: QADeploy
     steps:
