@@ -14,7 +14,7 @@ stages:
   jobs:
   - job: Get_Info
     steps:
-    - bash: echo $(Build.BuildNumber)
+    - bash: echo 'Build number is '$(Build.BuildNumber)
 - stage: Build
   jobs:
   - job: FirstJob
